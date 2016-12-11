@@ -79,8 +79,39 @@
 %  \tableofcontents
 %\end{frame}
 
-\begin{frame}{Introduction}
+\begin{frame}{My goals}
+\vspace{0.6 cm}
+\mbox{\hspace{-0.6 cm}\begin{minipage}{1.1\linewidth}
+\begin{enumerate}
+\item \textcolor{darkblue}{To build bridges between the HEP software ecosystem and the big data ecosystems--- Scientific Python and Hadoop/Spark--- so that HEP data can easily flow between them.}
 
+\begin{itemize}\setlength{\itemsep}{0.1 cm}
+\item {\bf Scikit-HEP:} reorganize rootpy, root\_numpy, Ostap and maybe others into a Pythonic layer between HEP and Scientific Python.
+
+\textcolor{gray}{\it with Eduardo, David, Noel Dawe, Vanya Belyaev, and Sasha Mazurov}
+
+\item {\bf root4j:} pure-Java ROOT I/O for Spark integration.
+
+\textcolor{gray}{\it with Viktor Khristenko for Oliver Gutsche and Matteo Cremonesi}
+
+\item {\bf Scope:} NoSQL database/server for interactive analysis.
+
+\textcolor{gray}{\it with Jin Chang and Igor Mandrichenko}
+\end{itemize}
+
+\item \textcolor{darkblue}{To build computational engines in those big data ecosystems that allow us to perform HEP-style analyses when we get there.}
+
+\begin{itemize}\setlength{\itemsep}{0.1 cm}
+\item {\bf Histogrammar:} functional interface to aggregation.
+
+\textcolor{gray}{\it with Alexey Svyatkovskiy for Oliver Gutsche and Matteo Cremonesi}
+
+\item {\bf Femtocode:} query language for Scope and Spark DataFrames.
+
+\textcolor{gray}{\it just me}
+\end{itemize}
+\end{enumerate}
+\end{minipage}}
 \end{frame}
 
 \end{document}
