@@ -102,7 +102,7 @@
 \item \textcolor{darkblue}{To build computational engines in those big data ecosystems that allow us to perform HEP-style analyses when we get there.}
 
 \begin{itemize}\setlength{\itemsep}{0.1 cm}
-\item {\bf Histogrammar:} functional interface to aggregation.
+\item {\bf Histogrammar:} functional API and metalanguage for aggregation.
 
 \textcolor{gray}{\it with Alexey Svyatkovskiy for Oliver Gutsche and Matteo Cremonesi}
 
@@ -139,8 +139,65 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Goal}
-\textcolor{darkblue}{Goal: widely used code and some publications.}
+\begin{frame}{Detailed descriptions: Histogrammar}
+\vspace{0.6 cm}
+\begin{columns}
+\column{0.4\linewidth}
+Aggregate data from a variety of backends, plot it in a variety of frontends.
+\column{0.5\linewidth}
+\includegraphics[width=\linewidth]{histogrammar-logo.png}
+\end{columns}
+
+\vspace{0.4 cm}
+Composable aggregators that are good for parallelization, particularly good for functional frameworks like Spark, as well as conceptual and performance advantages for PyROOT.
+
+\vspace{0.4 cm}
+\textcolor{darkblue}{Status:}
+\begin{itemize}
+\item User-ready but adoption is slow.
+\item Introduced to physicists in many one-on-one sessions, to industry in high-profile talks. Everyone was excited while we talked, but few followed up.
+\item Missed ROOT release because ROOT wasn't ready to include Python subpackages. Will target Scikit-HEP instead. \\ \textcolor{gray}{(And possibly add a C++ Histogrammar to Enrico Guiraud's functional chains.)}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Detailed descriptions: Scikit-HEP}
+\vspace{0.5 cm}
+\begin{columns}
+\column{0.6\linewidth}
+rootpy, root\_numpy, and Ostap are widely-used Pythonic layers for ROOT.
+
+\vspace{0.4 cm}
+I suggested combination into a single project to build on existing momentum, but I probably won't be a major contributor \textcolor{gray}{(except Histogrammar)}.
+
+\vspace{0.4 cm}
+Also to shift focus from Python and ROOT to Python and HEP.
+\column{0.3\linewidth}
+\scriptsize
+\includegraphics[width=\linewidth]{femtocode-logo.png}
+
+\textcolor{darkgray}{Note: logo suggestion has {\it not} been agreed upon.}
+\end{columns}
+
+\vspace{0.4 cm}
+\textcolor{darkblue}{Status:}
+\begin{itemize}
+\item Everyone's enthusiastic and we discuss progress in regular Skype meetings and by Slack.
+\item Mostly refactoring/relicensing the original projects, preparing for the big merger.
+\item I'm beginning to advertise it (Wednesday's LPC Coffee Chat).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Detailed descriptions: root4j/spark-root}
+\end{frame}
+
+\begin{frame}{Detailed descriptions: Femtocode}
+\end{frame}
+
+\begin{frame}{Detailed descriptions: Scope}
+\end{frame}
+
+\begin{frame}{Conclusions}
+\textcolor{darkblue}{Overall goal: widely used code and some publications.}
 
 \vspace{0.25 cm}
 Not much to show yet:
@@ -153,7 +210,5 @@ Not much to show yet:
 \item Missed round of HEP-computing conference deadlines because they're early in the year and I wasn't ready back then. Gearing up for next year's cycle.
 \end{itemize}
 \end{frame}
-
-
 
 \end{document}
