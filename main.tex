@@ -94,19 +94,19 @@
 
 \textcolor{gray}{\it with Viktor Khristenko, for Oliver Gutsche and Matteo Cremonesi}
 
-\item {\bf Scope:} NoSQL database/server for interactive analysis.
+\item {\bf Fermiscope:} NoSQL database/server for interactive analysis.
 
 \textcolor{gray}{\it with Jin Chang and Igor Mandrichenko}
 \end{itemize}
 
-\item \textcolor{darkblue}{To build computational engines in those big data ecosystems that allow us to perform HEP-style analyses when we get there.}
+\item \textcolor{darkblue}{To build HEP-friendly APIs in those big data ecosystems that allow us to perform our analyses when we get there.}
 
 \begin{itemize}\setlength{\itemsep}{0.1 cm}
 \item {\bf Histogrammar:} functional API and metalanguage for aggregation.
 
 \textcolor{gray}{\it with Alexey Svyatkovskiy for Oliver Gutsche and Matteo Cremonesi}
 
-\item {\bf Femtocode:} query language for Scope and Spark DataFrames.
+\item {\bf Femtocode:} query language for Fermiscope and Spark DataFrames.
 
 \textcolor{gray}{\it with Peter Hansen, for Jin Chang and Igor Mandrichenko}
 \end{itemize}
@@ -116,7 +116,7 @@
 
 \begin{frame}{They're all connected}
 \begin{center}
-\includegraphics[width=0.78\linewidth]{relationships.pdf}
+\includegraphics[width=0.8\linewidth]{relationships.pdf}
 \end{center}
 \end{frame}
 
@@ -131,10 +131,10 @@
 
 \item Focusing on building developer communities before user communities.
 \begin{itemize}
-\item Aiming for 1--2 users of each project once it's minimally useful.
-\item But I'm trying to bring in as many developers as there are use-cases, to each concentrate on their favorite part.
-\item This includes developers outside of HEP (if possible).
-\item Planning on using focus groups to guide design, rather than just reacting with release-early-release-often.
+\item Aiming for 1--2 users of each project once it's minimally useful, then broadening to a wider user base when it's stable.
+\item But I'm trying to bring in as many developers as there are use-cases. Each concentrates on his/her direct need.
+\item This includes developers outside of HEP, if possible.
+\item Planning on using focus groups of users to guide design, rather than just reacting with release-early-release-often.
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -154,9 +154,9 @@ Composable aggregators that are good for parallelization, particularly good for 
 \vspace{0.4 cm}
 \textcolor{darkblue}{Status:}
 \begin{itemize}
-\item User-ready but adoption is slow.
+\item Successful beta-tester stage; user-ready but adoption is slow.
 \item Introduced to physicists in many one-on-one sessions, to industry in high-profile talks. Everyone was excited while we talked, but few followed up.
-\item Missed ROOT release because ROOT wasn't ready to include Python subpackages. Will target Scikit-HEP instead. \\ \textcolor{gray}{(And possibly add a C++ Histogrammar to Enrico Guiraud's functional chains.)}
+\item Missed ROOT release because ROOT wasn't ready to include Python subpackages. Will target Scikit-HEP instead. \\ \textcolor{gray}{(And possibly add a C++ Histogrammar to Enrico Guiraud's or Brian's functional chains.)}
 \end{itemize}
 \end{frame}
 
@@ -166,22 +166,22 @@ Composable aggregators that are good for parallelization, particularly good for 
 \column{0.6\linewidth}
 rootpy, root\_numpy, and Ostap are widely-used Pythonic layers for ROOT.
 
-\vspace{0.4 cm}
+\vspace{0.2 cm}
 I suggested combination into a single project to build on existing momentum, but I probably won't be a major contributor \textcolor{gray}{(except Histogrammar)}.
 
-\vspace{0.4 cm}
-Also to shift focus from Python and ROOT to Python and HEP.
+\vspace{0.2 cm}
+Also shifting focus from ``Python and ROOT'' to ``Python and HEP.''
 \column{0.3\linewidth}
 \scriptsize
 \includegraphics[width=\linewidth]{femtocode-logo.png}
 
-\textcolor{darkgray}{Note: logo suggestion has {\it not} been agreed upon.}
+\textcolor{darkgray}{Note: logo suggestion has not been agreed upon.}
 \end{columns}
 
 \vspace{0.4 cm}
 \textcolor{darkblue}{Status:}
 \begin{itemize}
-\item Everyone's enthusiastic and we discuss progress in regular Skype meetings and by Slack.
+\item Everyone's enthusiastic and we discuss progress in regular meetings by Skype and Slack.
 \item Mostly refactoring/relicensing the original projects, preparing for the big merger.
 \item I'm beginning to advertise it (Wednesday's LPC Coffee Chat).
 \end{itemize}
@@ -209,8 +209,8 @@ C++ ROOT via JNI is buggy, but the old pure-Java package works (with a little ef
 \vspace{0.4 cm}
 \textcolor{darkblue}{Status:}
 \begin{itemize}
-\item Viktor Khristenko has completely taken over the codebase, and is actively using it on his own thesis. I just need to make sure it satisfies other use-cases.
-\item Directly juxtaposed with Danilo \& Enric (ROOT Team)'s ROOT-in-Spark. Trying to apply both to the same use-case Marc Dunser (CMS). Having trouble getting Marc's attention.
+\item Viktor Khristenko has completely taken over the codebase, and is actively using it on his own thesis. I just need to make sure it works for other use-cases.
+\item Directly juxtaposed with Danilo \& Enric (ROOT Team)'s ROOT-in-Spark. Trying to apply both to the same use-case: Marc Dunser (CMS). Having trouble getting Marc's attention.
 \end{itemize}
 \end{frame}
 
@@ -224,21 +224,21 @@ After months of talking about it, gauging interest and prior art (inside and out
 \vspace{0.4 cm}
 \textcolor{darkblue}{Status:}
 \begin{itemize}
-\item Started implementing, off and on, right before CHEP in October. Progress is pretty good, considering.
+\item Started implementing, off and on, right after CHEP in October. Progress is pretty good, considering.
 \item I'm finding it hard to describe what Femtocode is and what it's about.
-\item Peter Hansen has signed on to write the GPU backend, but progress is slow. Femtocode doesn't strictly need a GPU backend, though I think that would be a good target.
+\item Peter Hansen has signed on to write the GPU backend, but interactions have been slow. \textcolor{gray}{(Femtocode doesn't strictly need a GPU backend, though I think it would be a great target.)}
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Detailed descriptions: Scope}
-\vspace{0.5 cm}
+\begin{frame}{Detailed descriptions: Fermiscope}
+\vspace{0.4 cm}
 Early on, I thought HEP needed an Ibis/Impala/Kudu/Drill-type thing to make plots in seconds, rather than private skims in weeks. Oli's interest in Spark won out.
 
-\vspace{0.4 cm}
-Using Spark's RDDs and DataFrames, I came to realize that the optimization these systems provide wouldn't be available to non-flat ntuple analysis without Femtocode-like extensions.
+\vspace{0.3 cm}
+Using Spark's DataFrames, I came to realize that the optimization these systems provide wouldn't be available to non-flat ntuple analysis without Femtocode-like extensions.
 
-\vspace{0.4 cm}
-Meshed with Jin \& Igor's LDRD project by a kind of convergence.
+\vspace{0.3 cm}
+Meshed with Jin \& Igor's NoSQL LDRD project by a kind of convergence. Needs Femtocode and has a Sep.\ 2018 due date.
 
 \vspace{0.4 cm}
 \textcolor{darkblue}{Status:}
@@ -259,7 +259,7 @@ Not much to show yet:
 \begin{itemize}
 \item I did spend time evangelizing it, to the detriment of other work.
 \item Response has been excitement without application.
-\item It will be important in later projects (Femtocode, Scope), so it's not a loss to set it aside for a while.
+\item It will be important in later projects (Femtocode, Fermiscope), so it's not a loss to set it aside for a while.
 \end{itemize}
 
 \item All other projects are too early to judge.
