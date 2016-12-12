@@ -25,7 +25,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="324.05092"
+     inkscape:cx="352.62235"
      inkscape:cy="296.83325"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -52,7 +52,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -207,15 +207,20 @@
     <text
        sodipodi:linespacing="125%"
        id="text3013"
-       y="326.05844"
-       x="379.91483"
+       y="307.19196"
+       x="380.49503"
        style="font-size:16px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          style="font-size:28px;font-weight:bold"
-         y="326.05844"
-         x="379.91483"
+         y="307.19196"
+         x="380.49503"
          id="tspan3015"
-         sodipodi:role="line">root4j</tspan></text>
+         sodipodi:role="line">root4j/</tspan><tspan
+         style="font-size:28px;font-weight:bold"
+         y="342.19196"
+         x="380.49503"
+         sodipodi:role="line"
+         id="tspan3040">spark-root</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -337,7 +342,7 @@
        sodipodi:cy="526.64789"
        sodipodi:rx="89.285713"
        sodipodi:ry="34.285713"
-       d="m 468.57142,526.64789 a 89.285713,34.285713 0 1 1 -178.57143,0 89.285713,34.285713 0 1 1 178.57143,0 z"
+       d="m 468.57142,526.64789 c 0,18.93547 -39.97458,34.28571 -89.28571,34.28571 -49.31114,0 -89.28572,-15.35024 -89.28572,-34.28571 0,-18.93548 39.97458,-34.28572 89.28572,-34.28572 49.31113,0 89.28571,15.35024 89.28571,34.28572 z"
        transform="translate(0,-1.9999752)" />
     <text
        sodipodi:linespacing="110%"
