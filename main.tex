@@ -108,7 +108,7 @@
 
 \item {\bf Femtocode:} query language for Scope and Spark DataFrames.
 
-\textcolor{gray}{\it just me, for Jin Chang and Igor Mandrichenko}
+\textcolor{gray}{\it with Peter Hansen, for Jin Chang and Igor Mandrichenko}
 \end{itemize}
 \end{enumerate}
 \end{minipage}}
@@ -188,12 +188,64 @@ Also to shift focus from Python and ROOT to Python and HEP.
 \end{frame}
 
 \begin{frame}{Detailed descriptions: root4j/spark-root}
+\vspace{0.5 cm}
+Follow-up to my early work this year converting ROOT to Avro for Oli \& Matteo's analysis and replaces earlier plans of connecting ROOT to Apache Arrow.
+
+\vspace{0.3 cm}
+\begin{columns}[t]
+\column{0.45\linewidth}
+\mbox{ } \hfill \underline{File conversion} \hfill \mbox{ }
+
+\vspace{0.1 cm}
+Makes the bookkeeping problem worse, defeating the main benefit of Spark.
+
+\column{0.45\linewidth}
+\mbox{ } \hfill \underline{Direct reading} \hfill \mbox{ }
+
+\vspace{0.1 cm}
+C++ ROOT via JNI is buggy, but the old pure-Java package works (with a little effort).
+\end{columns}
+
+\vspace{0.4 cm}
+\textcolor{darkblue}{Status:}
+\begin{itemize}
+\item Viktor Khristenko has completely taken over the codebase, and is actively using it on his own thesis. I just need to make sure it satisfies other use-cases.
+\item Directly juxtaposed with Danilo \& Enric (ROOT Team)'s ROOT-in-Spark. Trying to apply both to the same use-case Marc Dunser (CMS). Having trouble getting Marc's attention.
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Detailed descriptions: Femtocode}
+\vspace{0.5 cm}
+I've been thinking about a more abstract numerical language (an ``executable chalkboard'') for a long time. See my earlier \href{http://dmg.org/pfa/}{\textcolor{blue}{PFA}}.
+
+\vspace{0.3 cm}
+After months of talking about it, gauging interest and prior art (inside and outside of HEP), I've found a niche that really needs it: big data pulls. See \href{https://indico.cern.ch/event/594180/}{\textcolor{blue}{Monday's talk}}.
+
+\vspace{0.4 cm}
+\textcolor{darkblue}{Status:}
+\begin{itemize}
+\item Started implementing, off and on, right before CHEP in October. Progress is pretty good, considering.
+\item I'm finding it hard to describe what Femtocode is and what it's about.
+\item Peter Hansen has signed on to write the GPU backend, but progress is slow. Femtocode doesn't strictly need a GPU backend, though I think that would be a good target.
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Detailed descriptions: Scope}
+\vspace{0.5 cm}
+Early on, I thought HEP needed an Ibis/Impala/Kudu/Drill-type thing to make plots in seconds, rather than private skims in weeks. Oli's interest in Spark won out.
+
+\vspace{0.4 cm}
+Using Spark's RDDs and DataFrames, I came to realize that the optimization these systems provide wouldn't be available to non-flat ntuple analysis without Femtocode-like extensions.
+
+\vspace{0.4 cm}
+Meshed with Jin \& Igor's LDRD project by a kind of convergence.
+
+\vspace{0.4 cm}
+\textcolor{darkblue}{Status:}
+\begin{itemize}
+\item It's hard for Igor to do much without minimally working Femtocode, but we've been converging on the shape of the project. Progress picked up this week.
+\item Using off-the-shelf parts wherever possible: CouchBase for storage, possibly Charm++ for execution.
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Conclusions}
@@ -203,11 +255,16 @@ Also to shift focus from Python and ROOT to Python and HEP.
 Not much to show yet:
 
 \begin{itemize}
-\item Histogrammar is user-ready but its adoption is slow. People in HEP and industry are excited when they see it, but never follow up with applications. Missed ROOT release date because ROOT is not ready to include Python subpackages. Will target Scikit-HEP instead. \textcolor{gray}{(And possibly fitting a C++ Histogrammar into Enrico Guiraud's functional chains.)}
+\item Histogrammar adoption should be higher than it is.
+\begin{itemize}
+\item I did spend time evangelizing it, to the detriment of other work.
+\item Response has been excitement without application.
+\item It will be important in later projects (Femtocode, Scope), so it's not a loss to set it aside for a while.
+\end{itemize}
 
 \item All other projects are too early to judge.
 
-\item Missed round of HEP-computing conference deadlines because they're early in the year and I wasn't ready back then. Gearing up for next year's cycle.
+\item Missed the first round of HEP-computing conference deadlines because they're early in the year and I wasn't ready back then. Gearing up for next year's cycle.
 \end{itemize}
 \end{frame}
 
