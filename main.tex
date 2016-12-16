@@ -59,12 +59,44 @@
   morestring=[b]"""
 }
 
-\title[2016-12-16-overview-of-projects]{Jim Pivarski's Overview of Projects}
-\author{Jim Pivarski}
+\title[2016-12-16-overview-of-projects]{David Lange's Overview of Projects}
+\author{David Lange}
 \institute{Princeton -- DIANA}
 \date{December 16, 2016}
 
 \begin{document}
+
+\logo{\pgfputat{\pgfxy(0.11, 8)}{\pgfbox[right,base]{\tikz{\filldraw[fill=dianablue, draw=none] (0 cm, 0 cm) rectangle (50 cm, 1 cm);}}}\pgfputat{\pgfxy(0.11, -0.6)}{\pgfbox[right,base]{\tikz{\filldraw[fill=dianablue, draw=none] (0 cm, 0 cm) rectangle (50 cm, 1 cm);}\includegraphics[height=0.99 cm]{diana-hep-logo.png}\tikz{\filldraw[fill=dianablue, draw=none] (0 cm, 0 cm) rectangle (4.9 cm, 1 cm);}}}}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\logo{\pgfputat{\pgfxy(0.11, 8)}{\pgfbox[right,base]{\tikz{\filldraw[fill=dianablue, draw=none] (0 cm, 0 cm) rectangle (50 cm, 1 cm);}\includegraphics[height=1 cm]{diana-hep-logo.png}}}}
+
+\begin{frame}{David Lange}
+\vspace{0.25 cm}
+\textcolor{darkblue}{Focused on increasing engagement of CMS analysis groups.}
+\begin{itemize}
+\item Python+ROOT-based analysis widespread in CMS \\ (e.g.\ FWLite, HEPPY framework).
+\end{itemize}
+
+\textcolor{darkblue}{Expanding and modernizing python toolkit in CMS/CMSSW.}
+\begin{itemize}
+\item Expanding suite of scientific Python tools: e.g.\ Pandas, scikit-learn, Jupyter, ML toolkits, etc.
+\item Expanding suite of HEP-developed tools: e.g.\ Histogrammar, rootpy, root\_numpy, etc.
+\item Moving CMS to pip-based python package management.
+\begin{itemize}
+\item Already makes package version management trivial.
+\item Eventual goal is to more generally distribute python stack via pip install (or equivalently as a condo channel) as alternative installation scheme for analysis users.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\title[2016-12-16-overview-of-projects]{Jim Pivarski's Overview of Projects}
+\author{Jim Pivarski}
+\institute{Princeton -- DIANA}
+\date{December 16, 2016}
 
 \logo{\pgfputat{\pgfxy(0.11, 8)}{\pgfbox[right,base]{\tikz{\filldraw[fill=dianablue, draw=none] (0 cm, 0 cm) rectangle (50 cm, 1 cm);}}}\pgfputat{\pgfxy(0.11, -0.6)}{\pgfbox[right,base]{\tikz{\filldraw[fill=dianablue, draw=none] (0 cm, 0 cm) rectangle (50 cm, 1 cm);}\includegraphics[height=0.99 cm]{diana-hep-logo.png}\tikz{\filldraw[fill=dianablue, draw=none] (0 cm, 0 cm) rectangle (4.9 cm, 1 cm);}}}}
 
@@ -94,7 +126,7 @@
 
 \textcolor{gray}{\it with Viktor Khristenko, for Oliver Gutsche and Matteo Cremonesi}
 
-\item {\bf Fermiscope:} NoSQL database/server for interactive analysis.
+\item {\bf ``Scope:''} NoSQL database/server for interactive analysis.
 
 \textcolor{gray}{\it with Jin Chang and Igor Mandrichenko}
 \end{itemize}
@@ -106,7 +138,7 @@
 
 \textcolor{gray}{\it with Alexey Svyatkovskiy for Oliver Gutsche and Matteo Cremonesi}
 
-\item {\bf Femtocode:} query language for Fermiscope and Spark DataFrames.
+\item {\bf Femtocode:} query language for ``Scope'' and Spark DataFrames.
 
 \textcolor{gray}{\it with Peter Hansen, for Jin Chang and Igor Mandrichenko}
 \end{itemize}
@@ -126,15 +158,13 @@
 \item Diverse suite of projects with interconnections:
 \begin{itemize}
 \item Not everything has to work, but they're all better if they do.
-\item If a competitor succeeds in some area, don't fight them. Concentrate on the others while the connection to successful projects provides an implicit incentive to grow later.
 \end{itemize}
 
 \item Focusing on building developer communities before user communities.
 \begin{itemize}
-\item Aiming for 1--2 users of each project once it's minimally useful, then broadening to a wider user base when it's stable.
-\item But I'm trying to bring in as many developers as there are use-cases. Each concentrates on his/her direct need.
+\item Aiming for 1--2 users in the beta-testing stage, but as many developers as there are use-cases.
 \item This includes developers outside of HEP, if possible.
-\item Planning on using focus groups of users to guide design, rather than just reacting with release-early-release-often.
+\item Planning on using focus groups of users to guide design, rather than reacting with release-early-release-often.
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -167,7 +197,7 @@ Composable aggregators that are good for parallelization, particularly good for 
 rootpy, root\_numpy, and Ostap are widely-used Pythonic layers for ROOT.
 
 \vspace{0.2 cm}
-I suggested combination into a single project to build on existing momentum, but I probably won't be a major contributor \textcolor{gray}{(except for Histogrammar)}.
+I suggested combination into a single project to build on existing momentum, probably won't be a major contributor \textcolor{gray}{(except for adding Histogrammar)}.
 
 \vspace{0.2 cm}
 Also shifting focus from ``Python and ROOT'' to ``Python and HEP.''
@@ -183,7 +213,6 @@ Also shifting focus from ``Python and ROOT'' to ``Python and HEP.''
 \begin{itemize}
 \item Everyone's enthusiastic and we discuss progress in regular meetings by Skype and Slack.
 \item Mostly refactoring/relicensing the original projects, preparing for the big merger.
-\item I'm beginning to advertise it (Wednesday's LPC Coffee Chat).
 \end{itemize}
 \end{frame}
 
@@ -194,13 +223,13 @@ Follow-up to my early work this year converting ROOT to Avro for Oli \& Matteo's
 \vspace{0.3 cm}
 \begin{columns}[t]
 \column{0.45\linewidth}
-\mbox{ } \hfill \underline{File conversion} \hfill \mbox{ }
+\mbox{ } \hfill \textcolor{darkblue}{\underline{File conversion}} \hfill \mbox{ }
 
 \vspace{0.1 cm}
 Makes the bookkeeping problem worse, defeating the main benefit of Spark.
 
 \column{0.45\linewidth}
-\mbox{ } \hfill \underline{Direct reading} \hfill \mbox{ }
+\mbox{ } \hfill \textcolor{darkblue}{\underline{Direct reading}} \hfill \mbox{ }
 
 \vspace{0.1 cm}
 C++ ROOT via JNI is buggy, but the old pure-Java package works (with a little effort).
@@ -216,7 +245,7 @@ C++ ROOT via JNI is buggy, but the old pure-Java package works (with a little ef
 
 \begin{frame}{Detailed descriptions: Femtocode}
 \vspace{0.5 cm}
-I've been thinking about a more abstract numerical language (an ``executable chalkboard'') for a long time. See my earlier \href{http://dmg.org/pfa/}{\textcolor{blue}{PFA}}.
+I've been thinking about a more abstract numerical language (an ``executable chalkboard'') for a long time. See earlier \href{http://dmg.org/pfa/}{\textcolor{blue}{PFA project}}.
 
 \vspace{0.3 cm}
 After months of talking about it, gauging interest and prior art (inside and outside of HEP), I've found a niche that really needs it: big data pulls. See \href{https://indico.cern.ch/event/594180/}{\textcolor{blue}{Monday's talk}}.
@@ -230,12 +259,12 @@ After months of talking about it, gauging interest and prior art (inside and out
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Detailed descriptions: Fermiscope}
+\begin{frame}{Detailed descriptions: ``Scope'' (name?)}
 \vspace{0.4 cm}
-Early on, I thought HEP needed an Ibis/Impala/Kudu/Drill-type thing to make plots in seconds, rather than private skims in weeks. Oli's interest in Spark won out.
+Early on, I thought HEP needed an \textcolor{darkblue}{Ibis/Impala/Kudu/Drill}-type thing to make plots in seconds, rather than private skims in weeks. Oli's interest in Spark won out.
 
 \vspace{0.3 cm}
-Using Spark's DataFrames, I came to realize that the optimization these systems provide wouldn't be available to non-flat ntuple analysis without Femtocode-like extensions.
+Using Spark's \textcolor{darkblue}{DataFrames}, I came to realize that the optimization these systems provide wouldn't be available to non-flat ntuple analysis without Femtocode-like extensions.
 
 \vspace{0.3 cm}
 Meshed with Jin \& Igor's NoSQL LDRD project by convergence. Now they'll need Femtocode with a Sep.\ 2018 final due date.
@@ -244,7 +273,7 @@ Meshed with Jin \& Igor's NoSQL LDRD project by convergence. Now they'll need Fe
 \textcolor{darkblue}{Status:}
 \begin{itemize}
 \item It's hard for Igor to do much without minimally working Femtocode, but we've been converging on the shape of the project. Progress picked up this week.
-\item Using off-the-shelf parts wherever possible: CouchBase for storage, possibly Charm++ for execution.
+\item Using off-the-shelf parts wherever possible: NoSQL databases.
 \end{itemize}
 \end{frame}
 
@@ -260,7 +289,7 @@ Not much to show yet:
 \begin{itemize}
 \item I did spend time evangelizing it, to the detriment of other work.
 \item Response has been excitement without application.
-\item It will be important in later projects (Femtocode, Fermiscope), so it's not a loss to set it aside for a while.
+\item It will be important in later projects (Femtocode, Scope), so it's not a loss to set it aside for a while.
 \end{itemize}
 
 \item All other projects are too early to judge.
@@ -269,7 +298,7 @@ Not much to show yet:
 \begin{itemize}
 \item On Nan Niu (Cincinnati)'s suggestion, I'm going to submit my work on focus groups to the \href{http://se4science.org/workshops/}{\textcolor{blue}{SE4Science Workshop}}.
 \item Will be working with Brian on a ``languages for HEP'' white paper; haven't started.
-\item But main publications should be on the projects described here.
+\item Aiming for 1--3 of HPDC, IEEE Big Data, ACAT, CHEP, Supercomputing, PEARC.
 \end{itemize}
 \end{itemize}
 \end{frame}
